@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+    api:
+        build: ./MonezyAPI
+        ports:
+            - 5001:5001
+        environment:
+            ConnectionStrings__ExpensesContext: Test
+            User__DbUsername: UserTeste
+            User__DbPassword: PassTeste
+            
+                
+            
+            
+        
+        
+        
