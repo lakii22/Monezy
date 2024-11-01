@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonezyAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8fab2186a3779542fd7230d8cb9d250b191a263")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonezyAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonezyAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
