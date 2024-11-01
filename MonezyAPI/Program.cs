@@ -5,6 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ExpensesContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("ExpensesContext") ?? throw new InvalidOperationException("Connection string 'ExpensesContext' not found.")));
 
+builder.Services.AddDbContext<UsersContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ExpensesContext") ?? throw new InvalidOperationException("Connection string 'UserContext' not found.")));
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();

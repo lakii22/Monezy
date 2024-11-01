@@ -6,13 +6,25 @@ services:
         ports:
             - 5001:5001
         environment:
-            ConnectionStrings__ExpensesContext: Test
-            User__DbUsername: UserTeste
-            User__DbPassword: PassTeste
-            
-                
-            
-            
+            ConnectionStrings__ExpensesContext: server=dbMain;username=postgres;password=postgresPass;database=monezy 
+            User__DbUsername: postgres
+            User__DbPassword: postgresPass
+    dbMain:
+        image: postgres
+        volumes:
+            - ./Sql/InitialMigrationMain.sql:/docker-entrypoint-initdb.d/InitialMigrationMain.sql
+        environment:
+            POSTGRES_PASSWORD: "postgresPass"
+        ports:
+            - 5432:5432
+    dbManager:
+        image: dpage/pgadmin4
+        ports:
+            - 1881:80
+        environment:
+            PGADMIN_DEFAULT_EMAIL: user@domain.com
+            PGADMIN_DEFAULT_PASSWORD: SuperSecret
+        
         
         
         
