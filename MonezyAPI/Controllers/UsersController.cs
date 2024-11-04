@@ -7,7 +7,7 @@ using MonezyAPI.Models;
 
 namespace MonezyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class UsersController : Controller
     {
@@ -19,9 +19,22 @@ namespace MonezyAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Users>> GetUsers()
+        public ActionResult<List<Users>> GetUsers()
         {
-            return new Users { };
+            return usersContext.Users.ToList();
+        }
+
+        [HttpGet("IdUser")]
+        public async Task<ActionResult<Users>> GetUserById(int UserId)
+        { 
+            var user = await usersContext.Users.FindAsync(UserId);
+
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(user);
         }
 
         [HttpPost]

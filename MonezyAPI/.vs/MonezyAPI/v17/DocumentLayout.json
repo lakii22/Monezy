@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\data\\userscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:data\\userscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\models\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:models\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,95 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Expenses.cs",
-              "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Models\\Expenses.cs",
-              "RelativeDocumentMoniker": "Models\\Expenses.cs",
-              "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Models\\Expenses.cs",
-              "RelativeToolTip": "Models\\Expenses.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:05:02.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "Models\\Users.cs",
-              "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Models\\Users.cs",
-              "RelativeToolTip": "Models\\Users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:48:31.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAB4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-31T23:46:14.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:45:21.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersContext.cs",
-              "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Data\\UsersContext.cs",
-              "RelativeDocumentMoniker": "Data\\UsersContext.cs",
-              "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Data\\UsersContext.cs",
-              "RelativeToolTip": "Data\\UsersContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:40:40.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAA5AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:35:34.722Z",
+              "WhenOpened": "2024-11-04T22:32:23.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ExpensesController.cs",
               "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\ExpensesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExpensesController.cs",
               "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\ExpensesController.cs",
               "RelativeToolTip": "Controllers\\ExpensesController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T22:17:28.088Z",
               "EditorCaption": ""
