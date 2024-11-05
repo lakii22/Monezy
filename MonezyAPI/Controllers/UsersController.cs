@@ -13,21 +13,25 @@ namespace MonezyAPI.Controllers
     {
         private readonly UsersContext usersContext;
 
-        public UsersController(UsersContext usersContext) 
+        public UsersController(UsersContext usersContext)
         {
             this.usersContext = usersContext;
         }
 
+
+        //get all
         [HttpGet]
         public ActionResult<List<Users>> GetUsers()
         {
             return usersContext.Users.ToList();
         }
 
-        [HttpGet("IdUser")]
-        public async Task<ActionResult<Users>> GetUserById(int UserId)
-        { 
-            var user = await usersContext.Users.FindAsync(UserId);
+
+        //get by id
+        [HttpGet("{IdUser}")]
+        public async Task<ActionResult<Users>> GetUserById(int IdUser)
+        {
+            var user = await usersContext.Users.FindAsync(IdUser);
 
             if (user == null)
             {
@@ -37,6 +41,8 @@ namespace MonezyAPI.Controllers
             return Ok(user);
         }
 
+
+        //Create User
         [HttpPost]
         public async Task<ActionResult<Users>> InsertUsers(Users user)
         {
@@ -44,6 +50,53 @@ namespace MonezyAPI.Controllers
             await usersContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(InsertUsers), new { id = user.IdUser }, user);
+        }
+
+        //update user
+        [HttpPatch("{IdUser}")]
+        public async Task<IActionResult> PatchUser(int IdUser, Users user)
+        {
+            if (IdUser != user.IdUser)
+            {
+                return BadRequest();
+            }
+
+            usersContext.Entry(user).State = EntityState.Modified;
+
+            try
+            {
+                await usersContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (user == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        //Delete
+        [HttpDelete("{IdUser}")]
+        public async Task<IActionResult> DeleteUser(int IdUser)
+        {
+            var user = await usersContext.Users.FindAsync(IdUser);
+
+            if (user == null) 
+            {
+                return NotFound(); 
+            }
+
+            usersContext.Users.Remove(user);
+            await usersContext.SaveChangesAsync();
+            
+            return NoContent();
         }
 
     }

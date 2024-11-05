@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|c:\\users\\lakii\\source\\repos\\monezy\\monezyapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C54D22-1109-4DD9-B203-E6C5AAC6BC2A}|MonezyAPI.csproj|solutionrelative:controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAYAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAUwFYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T22:32:23.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ExpensesController.cs",
               "DocumentMoniker": "C:\\Users\\lakii\\source\\repos\\Monezy\\MonezyAPI\\Controllers\\ExpensesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExpensesController.cs",
