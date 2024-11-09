@@ -133,7 +133,7 @@ namespace MonezyAPI.Controllers
 
                 await expensesRepository.DeleteExpense(IdExpense);
 
-                return Ok();
+                return NoContent();
             }
             catch (Exception)
             {
