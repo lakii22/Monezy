@@ -11,6 +11,7 @@ builder.Services.AddDbContext<UsersContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("ExpensesContext") ?? throw new InvalidOperationException("Connection string 'UserContext' not found.")));
 
 builder.Services.AddScoped<IExpensesRepository, ExpensesRepository>();
+builder.Services.AddScoped<IUserRepository, UsersRepository>();
 //builder.Services.AddSingleton<IExpensesRepository>();
 
 

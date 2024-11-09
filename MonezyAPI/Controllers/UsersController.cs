@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonezyAPI.Data;
+using MonezyAPI.Interfaces;
 using MonezyAPI.Models;
+using MonezyAPI.Repositories;
 
 namespace MonezyAPI.Controllers
 {
@@ -11,27 +13,25 @@ namespace MonezyAPI.Controllers
     [ApiController]
     public class UsersController : Controller
     {
-        private readonly UsersContext usersContext;
+        private readonly IUserRepository userRepository;
 
-        public UsersController(UsersContext usersContext)
+        public UsersController(IUserRepository userRepository)
         {
-            this.usersContext = usersContext;
+            this.userRepository = userRepository;
         }
-
 
         //get all
         [HttpGet]
         public ActionResult<List<Users>> GetUsers()
         {
-            return usersContext.Users.ToList();
+            return userRepository.GetUsers();
         }
-
 
         //get by id
         [HttpGet("{IdUser}")]
         public async Task<ActionResult<Users>> GetUserById(int IdUser)
         {
-            var user = await usersContext.Users.FindAsync(IdUser);
+            var user = await userRepository.GetUserById(IdUser);
 
             if (user == null)
             {
@@ -41,62 +41,73 @@ namespace MonezyAPI.Controllers
             return Ok(user);
         }
 
-
         //Create User
         [HttpPost]
         public async Task<ActionResult<Users>> InsertUsers(Users user)
         {
-            usersContext.Users.Add(user);
-            await usersContext.SaveChangesAsync();
+            try
+            {
+                if (user == null)
+                {
+                    return BadRequest();
+                }
 
-            return CreatedAtAction(nameof(InsertUsers), new { id = user.IdUser }, user);
+                var createdUser = await userRepository.InsertUsers(user);
+
+                return CreatedAtAction(nameof(GetUsers), new { id = user.IdUser }, createdUser.Value);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error inserting new user");
+            }
         }
 
         //update user
         [HttpPatch("{IdUser}")]
-        public async Task<IActionResult> PatchUser(int IdUser, Users user)
+        public async Task<ActionResult<Users>> PatchUser(int IdUser, Users user)
         {
-            if (IdUser != user.IdUser)
-            {
-                return BadRequest();
-            }
-
-            usersContext.Entry(user).State = EntityState.Modified;
-
             try
             {
-                await usersContext.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (user == null)
+                if (IdUser != user.IdUser)
                 {
-                    return NotFound();
+                    return BadRequest("User id mismatch");
                 }
-                else
-                {
-                    throw;
-                }
-            }
 
-            return NoContent();
+                var userToUpdate = await userRepository.GetUserById(IdUser);
+
+                if (userToUpdate == null)
+                {
+                    return NotFound($"User with the id {IdUser} not found");
+                }
+
+                return await userRepository.PatchUser(user);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error updating user data");
+            }
         }
 
         //Delete
         [HttpDelete("{IdUser}")]
         public async Task<IActionResult> DeleteUser(int IdUser)
         {
-            var user = await usersContext.Users.FindAsync(IdUser);
-
-            if (user == null) 
+            try
             {
-                return NotFound(); 
-            }
+                var userToDelete = await userRepository.GetUserById(IdUser);
+                if (userToDelete == null)
+                {
+                    return NotFound($"User with id {IdUser} not found");
+                }
 
-            usersContext.Users.Remove(user);
-            await usersContext.SaveChangesAsync();
-            
-            return NoContent();
+                await userRepository.DeleteUser(IdUser);
+
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting user from the server");
+            }
         }
 
     }
